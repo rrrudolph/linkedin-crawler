@@ -4,9 +4,7 @@ from io import StringIO
 from botocore.exceptions import NoCredentialsError, ClientError
 
 
-# going to read in the raw json, cnvert to df and then save as csv to s3
 bucket_name = 'rudy-scrapy-project'
-# filename = 'linkedinjobs.csv'
 filename = 'linkedin_jobs_raw.csv'
 
 s3 = boto3.client(
@@ -29,6 +27,7 @@ df = pd.read_csv(StringIO(contents))
 # 1    \n            \n        \n        Data Enginee...  https://www.linkedin.com/jobs/view/data-engine...
 # 2    \n            \n        \n        Data Enginee...  https://www.linkedin.com/jobs/view/data-engine...
 
+# Remove the spacing around each title
 df.title = df.title.replace('\n', '', regex=True)
 df.title = df.title.str.lstrip()
 df.title = df.title.str.rstrip()
