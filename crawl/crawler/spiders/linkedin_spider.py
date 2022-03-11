@@ -9,17 +9,8 @@ import time
 import boto3
 from botocore.exceptions import NoCredentialsError, ClientError
 
-# fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libcups2 libdbus-1-3 libdrm2 libgbm1 libgtk-3-0 libgtk-4-1 libnspr4 libnss3 libxcomposite1 libxdamage1 libxfixes3 libxkbcommon0 libxrandr2 xdg-utils
-
-# if chrome has issues in docker I can download the exe and put in this
-# project folder then write out the path like:
-# driver = webdriver.Chrome("/home/USER_NAME/FOLDER/chromedriver")
 
 URL = 'https://www.linkedin.com/jobs/search?keywords=Data%20Engineer&location=remote&geoId=&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0'
-
-# from linkedin_jobs.linkedin_jobs.secrets import ACCESS_KEY, SECRET_KEY
-# s3 = boto3.client('s3', aws_access_key_id=ACCESS_KEY,
-#                     aws_secret_access_key=SECRET_KEY)
 
 s3_client = boto3.client(service_name='s3')
 
