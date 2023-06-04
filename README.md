@@ -28,3 +28,6 @@ This repo utilizes Selenium and a simple Scrapy spider to grab Data Engineer job
 From there AWS Batch is used to read the data from S3, do some basic cleaning, and then save back into S3.
 
 I used Poetry to manage dependencies in the `crawl` side of the project, but because the `process` side has very few dependencies I went with a simple `requirements.txt` for it.
+
+### Use
+Rename the `.env_template` file to `.env` and put your linkedin creds in there. Then `chmod +x run.sh && ./run.sh`. To exit the poetry shell `exit`.
