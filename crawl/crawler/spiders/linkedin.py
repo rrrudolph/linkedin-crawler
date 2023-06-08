@@ -6,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time
 
-bad_words = ['java', '.net', 'node', 'springboot']
+bad_words = ['java', '.net', 'node', 'springboot', 'c#']
 
 URL_LOGIN = 'https://www.linkedin.com/'
 URL_JOBS = 'https://www.linkedin.com/jobs/search?keywords=Cloud%20Engineer%20AWS&location=remote&position=1&pageNum=0'

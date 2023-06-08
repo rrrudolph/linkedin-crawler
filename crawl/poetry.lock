@@ -445,7 +445,7 @@ w3lib = ">=1.17.0"
 
 [[package]]
 name = "selenium"
-version = "4.9.1"
+version = "4.10.0"
 description = ""
 category = "main"
 optional = false
@@ -625,7 +625,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "urllib3"
-version = "2.0.2"
+version = "2.0.3"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "main"
 optional = false
